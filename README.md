@@ -17,15 +17,15 @@ measure Robotic Process Automation (RPA) adoption, and analyze underwriting loss
 
 #### Page 1: Executive Overview
 *High-level KPIs, total payout dynamics, claims by policy type, vehicle brand, and loss matrix.*
-![Executive Overview](dashboard/End-to-End%20Insurance%20Analytics%20p1.png)
+![Executive Overview](dashboard/preview_p1.png)
 
 #### Page 2: Process Mining & RPA Efficiency
 *Bottleneck discovery, lead-time breakdowns, RPA vs. Human process variance, and adjuster performance scorecard.*
-![Process Mining and RPA Efficiency](dashboard/End-to-End%20Insurance%20Analytics%20p2.png)
+![Process Mining and RPA Efficiency](dashboard/preview_p2.png)
 
 #### Page 3: Risk & Underwriting Profile
 *Claimant age distribution analysis, loss trends by vehicle model/year, and accident profile dynamics.*
-![Risk and Underwriting Profile](dashboard/End-to-End%20Insurance%20Analytics%20p3.png)
+![Risk and Underwriting Profile](dashboard/preview_p3.png)
 
 ---
 
