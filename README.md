@@ -4,11 +4,11 @@
 ![Domain](https://img.shields.io/badge/Domain-Insurance%20%26%20Claims-blue)
 ![Methodology](https://img.shields.io/badge/Methodology-Process%20Mining-green)
 
-An end-to-end insurance analytics project focused on claims processing efficiency, Process Mining, Robotic Process Automation
-(RPA) adoption, operational bottlenecks, adjuster performance, and underwriting risk analysis.
+An end-to-end insurance analytics project focused on claims processing efficiency, Process Mining, Robotic Process Automation (RPA) 
+adoption, operational bottlenecks, adjuster performance, and underwriting risk analysis.
 
-The project transforms an insurance claims event log into actionable business insights through interactive Tableau dashboards 
-and supporting analytical documentation.
+The project transforms an insurance claims event log into actionable business insights through Tableau dashboards and supporting 
+analytical documentation.
 
 ---
 
@@ -16,9 +16,13 @@ and supporting analytical documentation.
 
 ### Tableau Public
 
-**[View the Interactive Dashboard on Tableau Public](dashboard/Interactive_Dashboard.md)**
+**[View Interactive Dashboard on Tableau Public](https://public.tableau.com/views/End-to-EndInsuranceAnalytics/End-to-EndInsuranceAnalytics?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link)**
 
-The dashboard consists of three analytical pages:
+The dashboard consists of three analytical pages covering executive performance, process efficiency, RPA adoption, and underwriting risk.
+
+---
+
+## Dashboard Overview
 
 ### Page 1 — Executive Overview
 
@@ -67,14 +71,182 @@ Analyzes the risk structure of the insurance portfolio:
 
 ---
 
-## Documentation
+## Business Objectives
 
-Detailed project documentation is available in both English and Ukrainian.
+### Cycle Time Reduction
 
-- **[English Documentation](documentation/%28EN%29%20End-to-End%20Insurance%20Analytics_%20Process%20Mining%2C%20RPA%20Efficiency%20%26%20Risk%20Profile.pdf)**
-- **[Українська документація](documentation/%28UA%29%20End-to-End%20Insurance%20Analytics_%20Process%20Mining%2C%20RPA%20Efficiency%20%26%20Risk%20Profile.pdf)**
+Identify operational bottlenecks across the claims lifecycle and reduce the total time from First Notice of Loss (FNOL) to claim closure.
 
-The documentation covers the analytical methodology, business objectives, calculated metrics, dashboard design, key findings, and business recommendations.
+### RPA Efficiency Assessment
+
+Evaluate the adoption and effectiveness of Robotic Process Automation by comparing automated and human-driven claims processing.
+
+### Underwriting Risk Analysis
+
+Identify high-loss portfolio segments based on:
+
+- Driver age
+- Accident type
+- Policy type
+- Vehicle make
+- Vehicle model
+- Vehicle manufacturing year
+
+### Adjuster Workload Optimization
+
+Evaluate adjuster performance using:
+
+- Number of processed claims
+- Total approved payouts
+- Average time to decision
+
+### Executive Monitoring
+
+Provide management with a centralized dashboard for monitoring:
+
+- Claims volume
+- Total payouts
+- Average claim severity
+- Processing time
+- RPA adoption
+- Portfolio risk
+
+---
+
+## Analytical Approach
+
+### Process Mining & Operational Analysis
+
+The project analyzes the insurance claims event log to identify delays between key process stages.
+
+Key metrics include:
+
+- Average End-to-End Claim Cycle Time
+- Individual activity duration
+- FNOL → Assign duration
+- Assign → Decision duration
+- Average and median processing time
+- RPA vs Human processing time
+- Settlement time distribution
+
+### Financial & Risk Analytics
+
+The analysis evaluates the financial structure of the claims portfolio.
+
+Key analyses include:
+
+- Total approved payouts
+- Average claim amount
+- Payouts by policy type
+- Payouts by vehicle make
+- Payouts by vehicle model
+- Payouts by manufacturing year
+- Accident type analysis
+- Policy type × accident type loss matrix
+- Claim amount by claimant age
+
+### Workforce Performance
+
+The project evaluates the performance of the Top-10 adjusters using:
+
+- Total processed claims
+- Total approved payouts
+- Average time to decision
+
+This allows management to compare workload and operational performance across adjusters.
+
+---
+
+## Key Findings
+
+### Primary Process Bottleneck
+
+The **FNOL → Assign** stage takes approximately **15.01 days** on average.
+
+This represents more than **42% of the total claim cycle**, with the overall average cycle time reaching approximately **35.01 days**.
+
+### Decision-Making Speed
+
+Once a claim is assigned to an adjuster, the **Assign → Decision** stage is significantly faster, taking approximately **5.01 days** on average.
+
+### RPA Adoption & Stability
+
+RPA accounts for approximately **35.33%** of processed cases.
+
+The median settlement time for RPA and Human processing is approximately the same at around **35 days**.
+
+However, RPA demonstrates fewer extreme time outliers, indicating greater process consistency and operational stability.
+
+### Adjuster Performance
+
+The Top-10 adjusters process approximately **9–15 cases each**.
+
+Average time-to-decision remains within a relatively narrow range of approximately **19–22 days**.
+
+### High-Loss Vehicle Segments
+
+The largest cumulative payout amounts are associated with high-volume vehicle models, including:
+
+- Ford F-150
+- Toyota Camry
+- Honda Civic
+- Chevrolet Silverado
+
+The highest average claim amounts are observed among selected claimant age groups, particularly the **50–55** and **75–80** brackets.
+
+---
+
+## Business Recommendations
+
+### 1. Automate Claim Assignment
+
+The largest operational opportunity is the FNOL → Assign bottleneck.
+
+Implement automated claim assignment and intelligent routing to reduce waiting time between claim registration and adjuster assignment.
+
+### 2. Refine RPA Decision Rules
+
+Introduce Straight-Through Processing (STP) for low-complexity claims.
+
+Claims below a predefined threshold could be automatically processed when risk and fraud indicators are within acceptable limits.
+
+### 3. Expand RPA Coverage
+
+Increase RPA adoption by extending automation to additional standardized process stages, particularly:
+
+- Set Reserve
+- Payment Sent
+- Standard Collision claims
+- Standard Comprehensive claims
+
+### 4. Improve Underwriting Risk Management
+
+Review pricing, deductibles, and underwriting rules for vehicle segments demonstrating consistently high cumulative losses.
+
+Particular attention should be given to high-loss vehicle models and relevant manufacturing-year cohorts.
+
+---
+
+## Tools & Technologies
+
+| Category | Technology |
+|---|---|
+| Business Intelligence | Tableau Public |
+| Data Analysis | Tableau |
+| Analytical Methodology | Process Mining |
+| Calculations | Tableau LOD Expressions |
+| Data Source | Insurance Claims Event Log |
+| Documentation | Markdown / PDF |
+| Version Control | Git / GitHub |
+
+---
+
+## Dataset
+
+The project uses a synthetic insurance claims event log containing information about the claims lifecycle, including process activities, 
+timestamps, policy characteristics, vehicle information, claimant attributes, payouts, adjusters, and RPA processing.
+
+**Dataset:** `Insurance_data - Insurance_claims_event_log.csv`
 
 ---
 
@@ -85,186 +257,19 @@ insurance-process-mining-rpa-analytics/
 │
 ├── data/
 │   └── Insurance_data - Insurance_claims_event_log.csv
-│       └── Original insurance claims event log dataset
 │
 ├── documentation/
 │   ├── (EN) End-to-End Insurance Analytics_ Process Mining, RPA Efficiency & Risk Profile.pdf
-│   │   └── Full project documentation in English
-│   │
 │   └── (UA) End-to-End Insurance Analytics_ Process Mining, RPA Efficiency & Risk Profile.pdf
-│       └── Full project documentation in Ukrainian
 │
 ├── dashboard/
-│   ├── preview_p1.png
-│   │   └── Executive Overview
-│   │
-│   ├── preview_p2.png
-│   │   └── Process Mining & RPA Efficiency
-│   │
-│   ├── preview_p3.png
-│   │   └── Risk & Underwriting Profile
-│   │
+│   ├── End-to-End Insurance Analytics.twb
 │   ├── Interactive_Dashboard.md
-│   │   └── Link to the interactive Tableau Public dashboard
-│   │
-│   └── End-to-End Insurance Analytics.twb
-│       └── Tableau Workbook source file
+│   ├── preview_p1.png
+│   ├── preview_p2.png
+│   └── preview_p3.png
 │
 └── README.md
-    └── Project overview
-
-Strategic Business Objectives
-1. Cycle Time Reduction
-
-Identify operational bottlenecks across the claims lifecycle and reduce the total time from First Notice of Loss (FNOL) to claim closure.
-
-2. RPA Efficiency Assessment
-
-Evaluate the adoption and effectiveness of Robotic Process Automation by comparing automated and human-driven claims processing.
-
-3. Underwriting Risk Analysis
-
-Identify high-loss portfolio segments based on:
-
-Driver age
-Accident type
-Policy type
-Vehicle make
-Vehicle model
-Vehicle manufacturing year
-4. Adjuster Workload Optimization
-
-Evaluate adjuster performance using:
-
-Number of processed claims
-Total approved payouts
-Average time to decision
-5. Executive Monitoring
-
-Provide management with a centralized dashboard for monitoring:
-
-Claims volume
-Total payouts
-Average claim severity
-Processing time
-RPA adoption
-Portfolio risk
-Analytical Approach
-1. Process Mining & Operational Analysis
-
-The project analyzes the claims event log to identify delays between key process stages.
-
-Key metrics include:
-
-Average End-to-End Claim Cycle Time
-Activity duration
-FNOL → Assign duration
-Assign → Decision duration
-Average and median processing time
-RPA vs Human processing time
-Settlement time distribution
-2. Financial & Risk Analytics
-
-The analysis evaluates the financial structure of the claims portfolio.
-
-Key analyses include:
-
-Total approved payouts
-Average claim amount
-Payouts by policy type
-Payouts by vehicle make
-Payouts by vehicle model
-Payouts by manufacturing year
-Accident type analysis
-Policy type × accident type loss matrix
-Claim amount by claimant age
-3. Workforce Performance
-
-The project evaluates the performance of the Top-10 adjusters using:
-
-Total processed claims
-Total approved payouts
-Average time to decision
-
-This allows management to compare workload and operational performance across adjusters.
-
-Key Findings
-Primary Process Bottleneck
-
-The FNOL → Assign stage takes approximately 15.01 days on average.
-
-This represents more than 42% of the total claim cycle, with the overall average cycle time reaching approximately 35.01 days.
-
-Decision-Making Speed
-
-Once a claim is assigned to an adjuster, the Assign → Decision stage is significantly faster, taking approximately 5.01 days on average.
-
-RPA Adoption
-
-RPA accounts for approximately 35.33% of processed cases.
-
-The median settlement time for RPA and Human processing is approximately the same, while RPA demonstrates fewer extreme time outliers and 
-therefore greater process consistency.
-
-Adjuster Performance
-
-The Top-10 adjusters process approximately 9–15 cases each.
-
-Average time-to-decision remains within a relatively narrow range of approximately 19–22 days.
-
-High-Loss Vehicle Segments
-
-The largest cumulative payout amounts are associated with high-volume vehicle models, including:
-
-Ford F-150
-Toyota Camry
-Honda Civic
-Chevrolet Silverado
-
-The highest average claim amounts are observed among selected claimant age groups, particularly the 50–55 and 75–80 brackets.
-
-Business Recommendations
-1. Automate Claim Assignment
-
-The largest operational opportunity is the FNOL → Assign bottleneck.
-
-Implement automated claim assignment and intelligent routing to reduce waiting time between claim registration and adjuster assignment.
-
-2. Refine RPA Decision Rules
-
-Introduce Straight-Through Processing (STP) for low-complexity claims.
-
-Claims below a predefined threshold could be automatically processed when risk and fraud indicators are within acceptable limits.
-
-3. Expand RPA Coverage
-
-Increase RPA adoption by extending automation to additional standardized process stages, particularly:
-
-Set Reserve
-Payment Sent
-Standard Collision claims
-Standard Comprehensive claims
-4. Improve Underwriting Risk Management
-
-Review pricing, deductibles, and underwriting rules for vehicle segments demonstrating consistently high cumulative losses.
-
-Particular attention should be given to high-loss vehicle models and relevant manufacturing-year cohorts.
-
-Tools & Technologies
-Category	Technology
-Business Intelligence	Tableau Public
-Data Analysis	Tableau
-Analytical Methodology	Process Mining
-Calculations	Tableau LOD Expressions
-Data Source	Insurance Claims Event Log
-Documentation	Markdown / PDF
-Version Control	Git / GitHub
-Dataset
-
-The project uses a synthetic insurance claims event log containing information about the claims lifecycle, including process activities, 
-timestamps, policy characteristics, vehicle information, claimant attributes, payouts, adjusters, and RPA processing.
-
-Dataset: Insurance_data - Insurance_claims_event_log.csv
 
 Project Deliverables
 
@@ -273,9 +278,36 @@ The repository contains:
 Original insurance claims event log
 Interactive Tableau Public dashboard
 Tableau workbook source file
-Dashboard screenshots
+Three dashboard preview images
 Full analytical documentation in English
 Full analytical documentation in Ukrainian
+Documentation
+
+Detailed analytical documentation is available in English and Ukrainian in the documentation folder.
+
+The documentation covers:
+
+Strategic Business Objectives
+Key Analytical and Technical Tasks
+Conclusions
+Practical Business Recommendations
+
+The original Tableau workbook is included in the repository:
+
+dashboard/End-to-End Insurance Analytics.twb
+
+The workbook contains the dashboard structure, visualizations, calculated fields, and analytical logic used to produce the final report.
+
+Project Outcome
+
+The project demonstrates an end-to-end analytical workflow:
+
+Raw Event Log → Data Analysis → Process Mining → KPI Calculation → Bottleneck Identification → RPA Analysis → Risk Segmentation → Tableau Dashboard → Business Recommendations
+
+The final solution connects operational process metrics with financial and underwriting insights to support data-driven decision-making in insurance claims management.
+
+---
+
 Author
 
 Oleksandr Sitanskyi
