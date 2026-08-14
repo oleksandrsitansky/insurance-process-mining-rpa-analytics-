@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# macOS folders
+._*
+
+# Tableau temporary / cache files
+*.twb~
+*.tfl
+*.hyper
+*.tmp
+
+# Tableau extracts
+*.tde
+
+# Temporary files
+*.tmp
+*.temp
+*.log
