@@ -36,7 +36,7 @@ Provides a high-level overview of the insurance claims portfolio, including:
 - Claims by vehicle brand
 - Accident and loss analysis
 
-![Executive Overview](dashboard/preview_p1.png)
+![Executive Overview](https://raw.githubusercontent.com/oleksandrsitansky/insurance-process-mining-rpa-analytics-/main/dashboard/preview_p1.png)
 
 ---
 
@@ -52,7 +52,7 @@ Focuses on operational efficiency and claims processing performance:
 - RPA adoption rate
 - Adjuster workload and performance
 
-![Process Mining & RPA Efficiency](dashboard/preview_p2.png)
+![Process Mining and RPA Efficiency](https://raw.githubusercontent.com/oleksandrsitansky/insurance-process-mining-rpa-analytics-/main/dashboard/preview_p2.png)
 
 ---
 
@@ -67,7 +67,7 @@ Analyzes the risk structure of the insurance portfolio:
 - Accident type dynamics
 - Policy type × accident type loss matrix
 
-![Risk & Underwriting Profile](dashboard/preview_p3.png)
+![Risk and Underwriting Profile](https://raw.githubusercontent.com/oleksandrsitansky/insurance-process-mining-rpa-analytics-/main/dashboard/preview_p3.png)
 
 ---
 
