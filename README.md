@@ -1,14 +1,12 @@
 # End-to-End Insurance Process Mining & RPA Efficiency Analytics
 
-![Tableau](https://img.shields.io/badge/Tableau-Public-E97627?style=flat&logo=tableau&logoColor=white)
+![Tableau](https://img.shields.io/badge/Tableau-Public-E97627?style=flat&logo=Tableau&logoColor=white)
 ![Domain](https://img.shields.io/badge/Domain-Insurance%20%26%20Claims-blue)
 ![Methodology](https://img.shields.io/badge/Methodology-Process%20Mining-green)
 
-An end-to-end insurance analytics project focused on claims processing efficiency, Process Mining, Robotic Process Automation (RPA) 
-adoption, operational bottlenecks, adjuster performance, and underwriting risk analysis.
+An end-to-end insurance analytics project focused on claims processing efficiency, Process Mining, Robotic Process Automation (RPA) adoption, operational bottlenecks, adjuster performance, and underwriting risk analysis.
 
-The project transforms an insurance claims event log into actionable business insights through Tableau dashboards and supporting 
-analytical documentation.
+The project transforms an insurance claims event log into actionable business insights through Tableau dashboards and supporting analytical documentation.
 
 ---
 
@@ -16,9 +14,9 @@ analytical documentation.
 
 ### Tableau Public
 
-**[View Interactive Dashboard on Tableau Public](https://public.tableau.com/views/End-to-EndInsuranceAnalytics/End-to-EndInsuranceAnalytics?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link)**
+[**View Interactive Dashboard on Tableau Public**](https://public.tableau.com/views/End-to-EndInsuranceAnalytics/End-to-EndInsuranceAnalytics?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link)
 
-The dashboard consists of three analytical pages covering executive performance, process efficiency, RPA adoption, and underwriting risk.
+The interactive dashboard consists of three analytical pages covering executive performance, process efficiency, RPA adoption, and underwriting risk.
 
 ---
 
@@ -31,12 +29,14 @@ Provides a high-level overview of the insurance claims portfolio, including:
 - Total claims
 - Total approved payouts
 - Average claim severity
+- Average claim cycle time
+- RPA adoption rate
 - Payout dynamics over time
 - Claims by policy type
 - Claims by vehicle brand
 - Accident and loss analysis
 
-![Executive Overview](dashboard/preview_p1.png)
+![Executive Overview](https://raw.githubusercontent.com/oleksandrsitansky/insurance-process-mining-rpa-analytics-/main/dashboard/preview_p1.png)
 
 ---
 
@@ -52,7 +52,7 @@ Focuses on operational efficiency and claims processing performance:
 - RPA adoption rate
 - Adjuster workload and performance
 
-![Process Mining and RPA Efficiency](dashboard/preview_p2.png)
+![Process Mining and RPA Efficiency](https://raw.githubusercontent.com/oleksandrsitansky/insurance-process-mining-rpa-analytics-/main/dashboard/preview_p2.png)
 
 ---
 
@@ -67,21 +67,21 @@ Analyzes the risk structure of the insurance portfolio:
 - Accident type dynamics
 - Policy type × accident type loss matrix
 
-![Risk and Underwriting Profile](dashboard/preview_p3.png)
+![Risk and Underwriting Profile](https://raw.githubusercontent.com/oleksandrsitansky/insurance-process-mining-rpa-analytics-/main/dashboard/preview_p3.png)
 
 ---
 
 ## Business Objectives
 
-### Cycle Time Reduction
+### 1. Cycle Time Reduction
 
 Identify operational bottlenecks across the claims lifecycle and reduce the total time from First Notice of Loss (FNOL) to claim closure.
 
-### RPA Efficiency Assessment
+### 2. RPA Efficiency Assessment
 
 Evaluate the adoption and effectiveness of Robotic Process Automation by comparing automated and human-driven claims processing.
 
-### Underwriting Risk Analysis
+### 3. Underwriting Risk Analysis
 
 Identify high-loss portfolio segments based on:
 
@@ -92,7 +92,7 @@ Identify high-loss portfolio segments based on:
 - Vehicle model
 - Vehicle manufacturing year
 
-### Adjuster Workload Optimization
+### 4. Adjuster Workload Optimization
 
 Evaluate adjuster performance using:
 
@@ -100,7 +100,7 @@ Evaluate adjuster performance using:
 - Total approved payouts
 - Average time to decision
 
-### Executive Monitoring
+### 5. Executive Monitoring
 
 Provide management with a centralized dashboard for monitoring:
 
@@ -161,13 +161,13 @@ This allows management to compare workload and operational performance across ad
 
 ### Primary Process Bottleneck
 
-The **FNOL → Assign** stage takes approximately **15.01 days** on average.
+The FNOL → Assign stage takes approximately **15.01 days** on average.
 
 This represents more than **42% of the total claim cycle**, with the overall average cycle time reaching approximately **35.01 days**.
 
 ### Decision-Making Speed
 
-Once a claim is assigned to an adjuster, the **Assign → Decision** stage is significantly faster, taking approximately **5.01 days** on average.
+Once a claim is assigned to an adjuster, the Assign → Decision stage is significantly faster, taking approximately **5.01 days** on average.
 
 ### RPA Adoption & Stability
 
@@ -227,26 +227,23 @@ Particular attention should be given to high-loss vehicle models and relevant ma
 
 ---
 
-## Tools & Technologies
-
-| Category | Technology |
-|---|---|
-| Business Intelligence | Tableau Public |
-| Data Analysis | Tableau |
-| Analytical Methodology | Process Mining |
-| Calculations | Tableau LOD Expressions |
-| Data Source | Insurance Claims Event Log |
-| Documentation | Markdown / PDF |
-| Version Control | Git / GitHub |
-
----
-
 ## Dataset
 
-The project uses a synthetic insurance claims event log containing information about the claims lifecycle, including process activities, 
-timestamps, policy characteristics, vehicle information, claimant attributes, payouts, adjusters, and RPA processing.
+The project uses a synthetic insurance claims event log containing information about:
 
-**Dataset:** `Insurance_data - Insurance_claims_event_log.csv`
+- Claims lifecycle
+- Process activities
+- Timestamps
+- Policy characteristics
+- Vehicle information
+- Claimant attributes
+- Payouts
+- Adjusters
+- RPA processing
+
+Dataset:
+
+`Insurance_data - Insurance_claims_event_log.csv`
 
 ---
 
@@ -258,10 +255,6 @@ insurance-process-mining-rpa-analytics-
 ├── data/
 │   └── Insurance_data - Insurance_claims_event_log.csv
 │
-├── documentation/
-│   ├── (EN) End-to-End Insurance Analytics_ Process Mining, RPA Efficiency & Risk Profile.pdf
-│   └── (UA) End-to-End Insurance Analytics_ Process Mining, RPA Efficiency & Risk Profile.pdf
-│
 ├── dashboard/
 │   ├── End-to-End Insurance Analytics.twb
 │   ├── Interactive_Dashboard.md
@@ -269,8 +262,11 @@ insurance-process-mining-rpa-analytics-
 │   ├── preview_p2.png
 │   └── preview_p3.png
 │
+├── documentation/
+│   ├── (EN) End-to-End Insurance Analytics_ Process Mining, RPA Efficiency & Risk Profile.pdf
+│   └── (UA) End-to-End Insurance Analytics_ Process Mining, RPA Efficiency & Risk Profile.pdf
+│
 └── README.md
-
 Project Deliverables
 
 The repository contains:
